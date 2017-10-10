@@ -1,0 +1,25 @@
+- Tháp Hà Nội (Tower of Hanoi)
+
+- Tháp Hà Nội (Tower of Hanoi) là gì ?
+Bài toán Tháp Hà Nội (Tower of Hanoi) là một trò chơi toán học bao gồm 3 cột và với số đĩa nhiều hơn 1.
+Dưới đây là hình minh họa bài toán Tháp Hà Nội (Tower of Hanoi) với trường hợp có 3 đĩa.
+Các đĩa có kích cỡ khác nhau và xếp theo tự tự tăng dần về kích cỡ từ trên xuống: đĩa nhỏ hơn ở trên đĩa lớn hơn.
+Với số đĩa khác nhau thì ta có các bài toán Tháp Hà Nội (Tower of Hanoi) khác nhau, tuy nhiên lời giải cho các bài toán này là tương tự nhau.
+Lời giải tối ưu cho bài toán Tháp Hà Nội (Tower of Hanoi) là khi trò chơi chỉ có 3 cọc.
+Với số cọc lớn hơn thì lời giải bài toán vẫn chưa được khẳng định.
+
+- Qui tắc trò chơi toán học Tháp Hà Nội (Tower of Hanoi)
+Nhiệm vụ của trò chơi là di chuyển các đĩa có kích cỡ khác nhau sang cột khác sao cho vẫn đảm bảo thứ tự ban đầu của các đĩa: đĩa nhỏ nằm trên đĩa lớn.
+
+Dưới đây là một số qui tắc cho trò chơi toán học Tháp Hà Nội (Tower of Hanoi):
+Mỗi lần chỉ có thể di chuyển một đĩa từ cột này sang cột khác.
+Chỉ được di chuyển đĩa nằm trên cùng (không được di chuyển các đĩa nằm giữa).
+Đĩa có kích thước lớn hơn không thể được đặt trên đĩa có kích thước nhỏ hơn.
+Dưới đây là hình minh họa cách giải bài toán Tháp Hà Nội (Tower of Hanoi) với trường hợp có 3 đĩa.
+Bài toán Tháp Hà Nội (Tower of Hanoi) với số đĩa là n có thể được giải với số bước tối thiểu là 2n−1.
+Do đó, với trường hợp 3 đĩa, bài toán Tháp Hà Nội (Tower of Hanoi) có thể được giải sau 23−1 = 7 bước.
+
+- Giải thuật cho bài toán Tháp Hà Nội (Tower of Hanoi)
+Bước 1: Di chuyển n-1 đĩa từ cotNguon tới cotTrungGian
+Bước 2: Di chuyển đĩa thứ n từ cotNguon tới cotDich
+Bước 3: Di chuyển n-1 đĩa từ cotTrungGian về cotDich

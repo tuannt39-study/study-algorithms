@@ -1,0 +1,36 @@
+- Giải thuật sắp xếp chèn (Insertion Sort)
+
+- Giải thuật sắp xếp chèn (Insertion Sort) là gì ?
+Sắp xếp chèn là một giải thuật sắp xếp dựa trên so sánh in-place.
+Ở đây, một danh sách con luôn luôn được duy trì dưới dạng đã qua sắp xếp.
+Sắp xếp chèn là chèn thêm một phần tử vào danh sách con đã qua sắp xếp. Phần tử được chèn vào vị trí thích hợp sao cho vẫn đảm bảo rằng danh sách con đó vẫn sắp theo thứ tự.
+Với cấu trúc dữ liệu mảng, chúng ta tưởng tượng là: mảng gồm hai phần: một danh sách con đã được sắp xếp và phần khác là các phần tử không có thứ tự.
+Giải thuật sắp xếp chèn sẽ thực hiện việc tìm kiếm liên tiếp qua mảng đó, và các phần tử không có thứ tự sẽ được di chuyển và được chèn vào vị trí thích hợp trong danh sách con (của cùng mảng đó).
+Giải thuật này không thích hợp sử dụng với các tập dữ liệu lớn khi độ phức tạp trường hợp xấu nhất và trường hợp trung bình là Ο(n2) với n là số phần tử.
+
+- Giải thuật sắp xếp chèn (Insertion Sort)
+Từ minh họa trên chúng ta đã có bức tranh tổng quát về giải thuật sắp xếp chèn, từ đó chúng ta sẽ có các bước cơ bản trong giải thuật như sau:
+Bước 1: Kiểm tra nếu phần tử đầu tiên đã được sắp xếp. trả về 1
+Bước 2: Lấy phần tử kế tiếp
+Bước 3: So sánh với tất cả phần tử trong danh sách con đã qua sắp xếp
+Bước 4: Dịch chuyển tất cả phần tử trong danh sách con mà lớn hơn giá trị để được sắp xếp
+Bước 5: Chèn giá trị đó
+Bước 6: Lặp lại cho tới khi danh sách được sắp xếp
+
+- Giải thuật mẫu cho sắp xếp nổi bọt
+Bắt đầu hàm insertionSort( A : mảng phần tử )
+   int holePosition
+   int valueToInsert
+   for i = 1 tới length(A) thực hiện:
+      /* chọn một giá trị để chèn */
+      valueToInsert = A[i]
+      holePosition = i
+      /*xác định vị trí cho phần tử được chèn */
+      while holePosition > 0 và A[holePosition-1] > valueToInsert thực hiện:
+         A[holePosition] = A[holePosition-1]
+         holePosition = holePosition -1
+      kết thúc while
+      /* chèn giá trị tại vị trí trên */
+      A[holePosition] = valueToInsert
+   kết thúc for
+Kết thúc hàm

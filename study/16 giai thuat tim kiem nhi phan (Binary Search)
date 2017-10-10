@@ -1,0 +1,29 @@
+- Giải thuật tìm kiếm nhị phân (Binary Search)
+
+- Giải thuật tìm kiếm nhị phân (Binary Search) là gì?
++ Binany Search (Tìm kiếm nhị phân) là một giải thuật tìm kiếm nhanh với độ phức tạp thời gian chạy là Ο(log n).
+Giải thuật tìm kiếm nhị phân làm việc dựa trên nguyên tắc chia để trị (Divide and Conquer). Để giải thuật này có thể làm việc một cách chính xác thì tập dữ liệu nên ở trong dạng đã được sắp xếp.
++ Binary Search tìm kiếm một phần tử cụ thể bằng cách so sánh phần tử tại vị trí giữa nhất của tập dữ liệu.
+Nếu tìm thấy kết nối thì chỉ mục của phần tử được trả về.
+Nếu phần tử cần tìm là lớn hơn giá trị phần tử giữa thì phần tử cần tìm được tìm trong mảng con nằm ở bên phải phần tử giữa; nếu không thì sẽ tìm ở trong mảng con nằm ở bên trái phần tử giữa.
+Tiến trình sẽ tiếp tục như vậy trên mảng con cho tới khi tìm hết mọi phần tử trên mảng con này.
+
+- Giải thuật mẫu cho Binary Search:
+Giải thuật tìm kiếm nhị phân (Binary Search)
+   A ← một mảng đã được sắp xếp
+   n ← kích cỡ mảng
+   x ← giá trị để tìm kiếm trong mảng
+   gán lowerBound = 1
+   gán upperBound = n 
+   while x not found
+      if upperBound < lowerBound 
+         EXIT: x không tồn tại.
+      gán midPoint = lowerBound + ( upperBound - lowerBound ) / 2
+      if A[midPoint] < x
+         gán lowerBound = midPoint + 1
+      if A[midPoint] > x
+         gán upperBound = midPoint - 1 
+      if A[midPoint] = x 
+         EXIT: x được tìm thấy tại midPoint
+   kết thúc while
+kết thúc giải thuật

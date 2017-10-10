@@ -1,0 +1,38 @@
+- Cấu trúc dữ liệu (Data Structure) là gì?
+
+- Cấu trúc dữ liệu (Data Structure) là cách lưu trữ, tổ chức dữ liệu có thứ tự, có hệ thống để dữ liệu có thể được sử dụng một cách hiệu quả.
+
+- Hai nền tảng hình thành nên một cấu trúc dữ liệu:
++ Interface: Mỗi cấu trúc dữ liệu có một interface. Interface biểu diễn một tập hợp các phép tính mà một cấu trúc dữ liệu hỗ trợ. Một Interface chỉ cung cấp danh sách các phép tính được hỗ trợ, các loại tham số mà chúng có thể chấp nhận và kiểu trả về của các phép tính này.
+
++ Implementation (Có thể hiểu là sự triển khai): Cung cấp sự biểu diễn nội bộ của một cấu trúc dữ liệu. Implementation cũng cung cấp phần định nghĩa của giải thuật được sử dụng trong các tính của cấu trúc dữ liệu.
+
+- Đặc điểm của một Cấu trúc dữ liệu:
++ Chính xác: Sự triển khai của Cấu trúc dữ liệu nên triển khai Interface của nó một cách chính xác.
++ Độ phức tạp về thời gian (Time Comlexity): Thời gian chạy hoặc thời gian thực thi của các phép tính của cấu trúc dữ liệu phải là nhỏ nhất có thể.
++ Độ phức tập về bộ nhớ (Space Complexity): Sự sử dụng bộ nhớ của mỗi phép tính của cấu trúc dữ liệu nên là nhỏ nhất có thể.
+
+- Tại sao Cấu trúc dữ liệu là cần thiết?
++ Tìm kiếm dữ liệu: Giả sử có 1 triệu hàng hóa được lưu giữ vào trong kho hàng hóa. Và giả sử có một ứng dụng cần để tìm kiếm 1 hàng hóa. Thì mỗi khi thực hiện tìm kiếm, ứng dụng này sẽ phải tìm kiếm 1 hàng hóa trong 1 triệu hàng hóa. Khi dữ liệu tăng lên thì việc tìm kiếm sẽ càng trở lên chậm và tốn kém hơn.
++ Tốc độ bộ vi xử lý:  Mặc dù bộ vi xử lý có tốc độ rất cao, tuy nhiên nó cũng có giới hạn và khi lượng dữ liệu lên tới hàng tỉ bản ghi thì tốc độ xử lý cũng sẽ không còn được nhanh nữa.
++ Đa yêu cầu: Khi hàng nghìn người dùng cùng thực hiện một phép tính tìm kiếm trên một Web Server thì cho dù Web Server đó có nhanh đến máy thì việc xử lý hàng nghìn phép tính cùng một lúc là thực sự rất khó.
+
+Để xử lý các vấn đề trên, các cấu trúc dữ liệu là một giải pháp tuyệt với. Dữ liệu có thể được tổ chức trong cấu trúc dữ liệu một cách để khi thực hiện tìm kiếm một phần tử nào đó thì dữ liệu yêu cầu sẽ được tìm thấy ngay lập tức.
+
+- Độ phức tạp thời gian thực thi trong cấu trúc dữ liệu và giải thuật.
++ Trường hợp xấu nhất (Worst Case): Là tình huống mà một phép tính của cấu trúc dữ liệu nào đó tốn thời gian tối đa (thời gian dài nhất).
+Ví dụ: Với ba số 1, 2, 3 thì nếu sắp xếp theo thứ tự giảm dần thì thời gian thực thi sẽ là dài nhất (đây là trường hợp xấu nhất).
++ Trường hợp trung bình (Average Case): Miêu tả thời gian thực thi trung bình một phép tính của một cấu trúc dữ liệu.
++ Trường hợp tốt nhất (Best Case): Là tình huống mà thời gian thực thì một phép tính của một cấu trúc dữ liệu là ít nhất.
+Ví dụ: Với ví dụ trên nếu sắp xếp theo thứ tự tăng dần thì thời gian thực hiện là ngắn nhất (đây là trường hợp tốt nhất).
+
+- Thuật ngữ cơ bản trong Cấu trúc dữ liệu:
++ Dữ liệu: Là các giá trị hoặc là tập hợp các giá trị.
++ Phần tử dữ liệu: Là một đơn vị lẻ của giá trị.
++ Các phần tử nhóm: Là phần tử dữ liệu được chia thành các phần tử con.
++ Các phần tử cơ bản: Là phần tử dữ liệu mà không thể bị chia nhỏ thành các phần tử con.
++ Thuộc tính và thực thể: Một thực thể là cái mà chứa một vài thuộc tính nào đó, và các thuộc tính này có thể được gán các giá trị.
++ Tập hợp thực thể: Các thực thể mà có các thuộc tính tương tự nhau thì cấu thành một tập hợp thực thể.
++ Trường: Là một đơn vị thông tin cơ bản biểu diễn một thuộc tính của một thực thể.
++ Bản ghi: Là một tập hợp các giá trị trường của một thực thể đã cho.
++ File: Là một tập hợp các bản ghi của các thực thể trong một tập hợp thực thể đã cho.

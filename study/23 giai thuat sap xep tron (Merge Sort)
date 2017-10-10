@@ -1,0 +1,48 @@
+- Giải thuật sắp xếp trộn (Merge Sort)
+
+- Giải thuật sắp xếp trộn (Merge Sort) là gì ?
+Sắp xếp trộn (Merge Sort) là một giải thuật sắp xếp dựa trên giải thuật Chia để trị (Divide and Conquer).
+Với độ phức tạp thời gian trường hợp xấu nhất là Ο(n log n) thì đây là một trong các giải thuật đáng được quan tâm nhất.
+Đầu tiên, giải thuật sắp xếp trộn chia mảng thành hai nửa và sau đó kết hợp chúng lại với nhau thành một mảng đã được sắp xếp.
+
+- Giải thuật cho Sắp xếp trộn (Merge Sort)
+Giải thuật sắp xếp trộn tiếp tục tiến trình chia danh sách thành hai nửa cho tới khi không thể chia được nữa.
+Theo định nghĩa, một list mà chỉ có một phần tử thì list này coi như là đã được sắp xếp.
+Sau đó, giải thuật sắp xếp trộn kết hợp các sorted list lại với nhau để tạo thành một list mới mà cũng đã được sắp xếp.
+Bước 1: Nếu chỉ có một phần tử trong list thì list này được xem như là đã được 
+sắp xếp. Trả về list hay giá trị nào đó.
+Bước 2: Chia list một cách đệ qui thành hai nửa cho tới khi không thể chia được nữa.
+Bước 3: Kết hợp các list nhỏ hơn (đã qua sắp xếp) thành list mới (cũng đã được sắp xếp).
+
+- Giải thuật mẫu cho Sắp xếp trộn (Merge Sort)
+Có thể nói rằng với giải thuật sắp xếp trộn, bạn cần chú ý hai điểm chính: chia và hợp.
+Bởi vì giải thuật sắp xếp trộn làm việc theo phương thức đệ qui nên phần triển khai giải thuật chúng ta cũng nên sử dụng đệ qui để biểu diễn.
+Bắt đầu giải thuật sắp xếp trộn mergesort( biến a là một mảng )
+   if ( n == 1 ) return a
+   khai báo biến l1 là một mảng = a[0] ... a[n/2]
+   khai báo biến l2 là một mảng = a[n/2+1] ... a[n]
+   l1 = mergesort( l1 )
+   l2 = mergesort( l2 )
+   return merge( l1, l2 ) // gọi hàm merge()
+Kết thúc giải thuật
+Bắt đầu hàm merge( Mảng a, mảng b )
+   khai báo biến c là một mảng
+   while ( a và b có phần tử )
+      if ( a[0] > b[0] )
+         Thêm b[0] vào cuối mảng c
+         Xóa b[0] từ b
+      else
+         Thêm a[0] vào cuối mảng c
+         Xóa a[0] từ a
+      kết thúc if
+   kết thúc while
+   while ( a có phần tử )
+      Thêm a[0] vào cuối mảng c
+      Xóa a[0] từ a
+   kết thúc while
+   while ( b có phần tử )
+      Thêm b[0] vào cuối mảng c
+      Xóa b[0] từ b
+   kết thúc while
+   return c
+Kết thúc hàm

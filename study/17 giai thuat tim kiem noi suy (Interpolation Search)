@@ -1,0 +1,50 @@
+- Giải thuật Tìm kiếm nội suy (Interpolation Search)
+
+- Giải thuật Tìm kiếm nội suy (Interpolation Search) là gì?
++ Tìm kiếm nội suy (Interpolation Search) là biến thể cải tiến của Tìm kiếm nhị phân (Binary Search).
+Để giải thuật tìm kiếm này làm việc chính xác thì tập dữ liệu phải được sắp xếp.
++ Binary Search có lợi thế lớn về độ phức tạp thời gian khi so sánh với Linear Search.
+Linear Search có độ phức tạp trường hợp xấu nhất là Ο(n) trong khi Binary Search là Ο(log n).
++ Có một số tình huống mà vị trí của dữ liệu cần tìm có thể đã được biết trước.
+Ví dụ, trong trường hợp danh bạ điện thoại, nếu chúng ta muốn tìm số điện thoại của Hương chẳng hạn.
+Trong trường hợp này, Linear Search và cả Binary Search có thể là chậm khi thực hiện tìm kiếm, khi mà chúng ta có thể trực tiếp nhảy tới phần không gian bộ nhớ có tên bắt đầu với H được lưu giữ.
+
+- Xác định vị trí trong Binary Search
+Trong Binary Search, nếu dữ liệu cần tìm không được tìm thấy thì phần còn lại của danh sách được phân chia thành hai phần:
+phần bên trái (chứa giá trị nhỏ hơn) và phần bên phải (chứa giá trị lớn hơn).
+Sau đó tiến trình tìm kiếm được thực hiện trên một trong hai phần này.
+
+- Giải thuật Tìm kiếm nội suy
+Bởi vì đây là sự cải tiến của giải thuật Binary Search nên chúng ta sẽ chỉ đề cập tới các bước để tìm kiếm chỉ mục của giá trị cần tìm bởi sử dụng vị trí dò.
+Bước 1 : Bắt đầu tìm kiếm dữ liệu từ phần giữa của danh sách
+Bước 2 : Nếu đây là một so khớp (một kết nối), thì trả về chỉ mục của phần tử, và thoát.
+Bước 3 : Nếu không phải là một so khớp, thì là vị trí dò.
+Bước 4 : Chia danh sách bởi sử dụng phép tính tìm vị trí dò và tìm vị trí giữa mới.
+Bước 5 : Nếu dữ liệu cần tìm lớn hơn giá trị tại vị trí giữa, thì tìm kiếm trong mảng con bên phải.
+Bước 6 : Nếu dữ liệu cần tìm nhỏ hơn giá trị tại vị trí giữa, thì tìm kiếm trong mảng con bên trái
+Bước 7 : Lặp lại cho tới khi tìm thấy so khớp
+
+- Code mẫu cho giải thuật Tìm kiếm nội suy
+A → Mảng
+N → Kích cỡ của A
+X → Giá trị cần tìm
+hàm tìm kiếm nội suy Interpolation_Search()
+   Gán Lo  →  0
+   Gán Mid → -1
+   Gán Hi  →  N-1
+   While X không so khớp
+      if Lo bằng Hi OR A[Lo] bằng A[Hi]
+         EXIT: Thất bại, không tìm thấy X
+      kết thúc if
+      Gán Mid = Lo + ((Hi - Lo) / (A[Hi] - A[Lo])) * (X - A[Lo])
+      if A[Mid] = X
+         EXIT: Thành công, tìm thấy tại Mid
+      else 
+         if A[Mid] < X
+            Thiết lập Lo thành Mid+1
+         else if A[Mid] > X
+            Thiết lập Hi thành Mid-1
+         kết thúc if
+      kết thúc if
+   Kết thúc While
+Kết thúc hàm

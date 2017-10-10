@@ -1,0 +1,31 @@
+- Giải thuật tham lam - Greedy Algorithms
+
+- Giải thuật tham lam là gì?
++ Tham lam là một trong những phương pháp phổ biến nhất để thiết kế giải thuật. Nếu bạn đã đọc qua truyện dân gian thì sẽ có câu truyện như này:
+Trên một mâm cỗ có nhiều món ăn, món nào ngon nhất ta sẽ ăn trước, ăn hết món đó ta sẽ chuyển sang món ngon thứ hai, và chuyển tiếp sang món thứ ba,...
+Rất nhiều giải thuật nổi tiếng được thiết kế dựa trên ý tưởng tham lam, ví dụ như giải thuật cây khung nhỏ nhất của Dijkstra, giải thuật cây khung nhỏ nhất của Kruskal,...
+
++ Giải thuật tham lam (Greedy Algorithms) là giải thuật tối ưu hóa tổ hợp. Gỉải thuật tìm kiếm, lựa chọn giải pháp tối ưu địa phương ở mỗi bước với hi vọng tìm được giải pháp tối ưu toàn cục.
+Giải thuật tham lam lựa chọn giải pháp nào được cho là tốt nhất ở thời điểm hiện tại và sau đố giải bài toán con nảy sinh từ việc thực hiện lựa chọn đó.
+Lựa chọn của giải thuật tham lam có thể phụ thuộc vào lựa chọn trước đó. Việc quyết định sớm và thay đổi hướng đi của giải thuật cùng vứi việt không bao giờ xét lại các quyết định cũ sẽ dẫn đến kết quả là giải thuật này không tối ưu để tìm giải pháp toàn cục.
+
+- Bài toán đếm số đồng tiền
++ Yêu cầu là hãy lựa chọn số lượng đồng tiền nhỏ nhất có thể sao cho tổng mệnh giá của các đồng tiền này bằng với một lượng tiền cho trước.
+Nếu đồng tiền có các mệnh giá lần lượt là 1, 2, 5 và 10 xu và lượng tiền cho trước là 18 xu thì giải thuật tham lam sẽ thực hiện như sau:
+B1: Chọn đồng 10 xu, do đó sẽ còn 18-10=8
+B2: Chon đồng 5 xu, còn 8-5=3
+B3: Chọn đồng 2 xu, còn 3-2=1
+B4: Chọn đồng 1 xu. Xong
+
++ Bạn thấy rằng cách làm trên khá ổn, và số lượng đồng tiền cần phải lựa chọn là 4 đồng tiền. Nhưng nếu chúng ta thay đổi bài toán trên một chút thì cũng hướng tiếp cận như trên có thể sẽ không đem lại cùng kết quả tối ưu.
+Chẳng hạn, một hệ thống tiền tệ khác có mệnh giá là 1, 7, 10 xu và lượng tiền cho trước là 15 xu thì theo giải thuật tham lam thì số đồng tiền cần chọn sẽ nhiều hơn 4. Tổng sẽ là 6 đồng tiền: 10+1+1+1+1+1. Trong khi cùng bài toán như trên có thể được xử lý bằng việc chỉ chọn 3 đồng tiền (7+7+1).
+
++ Do đó giải thuật tham lam tìm kiếm giải pháp tối ưu ở mỗi bước nhưng lại có thể thất bại trong việc tìm ra giải pháp tối ưu toàn cục.
+
+- Ví dụ áp dụng giải thuật tham lam
+Bài toán hành trình người bán hàng
+Giải thuật cây khung nhỏ nhất của Prim
+Giải thuật cây khung nhỏ nhất của Kruskal
+Giải thuật cây khung nhỏ nhất của Dijkstra
+Bài toán xếp lịch công việc
+Bài toán xếp ba lô

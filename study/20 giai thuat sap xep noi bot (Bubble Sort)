@@ -1,0 +1,46 @@
+- Giải thuật sắp xếp nổi bọt (Bubble Sort)
+
+- Sắp xếp nổi bọt (Bubble Sort) là gì ?
+Sắp xếp nổi bọt là một giải thuật sắp xếp đơn giản.
+Giải thuật sắp xếp này được tiến hành dựa trên việc so sánh cặp phần tử liền kề nhau và tráo đổi thứ tự nếu chúng không theo thứ tự.
+Giải thuật này không thích hợp sử dụng với các tập dữ liệu lớn khi mà độ phức tạp trường hợp xấu nhất và trường hợp trung bình là Ο(n2) với n là số phần tử.
+Giải thuật sắp xếp nổi bọt là giải thuật chậm nhất trong số các giải thuật sắp xếp cơ bản.
+Giải thuật này còn chậm hơn giải thuật đổi chỗ trực tiếp mặc dù số lần so sánh bằng nhau, nhưng do đổi chỗ hai phần tử kề nhau nên số lần đổi chỗ nhiều hơn.
+
+- Giải thuật cho sắp xếp nổi bọt (Bubble Sort)
+Giả sử list là một mảng có n phần tử.
+Tiếp đó giả sử hàm swap để tráo đổi giá trị của các phần tử trong mảng (đây là giả sử, tất nhiên là bạn có thể viết code riêng cho hàm swap này).
+Bắt đầu giải thuật BubbleSort(list)
+   for tất cả phần tử trong list
+      if list[i] > list[i+1]
+         swap(list[i], list[i+1])
+      kết thúc if
+   kết thúc for
+   return list
+Kết thúc BubbleSort
+
+- Giải thuật mẫu cho sắp xếp nổi bọt (Bubble Sort)
+Chúng ta thấy rằng giải thuật sắp xếp nổi bọt so sánh mỗi cặp phần tử trong mảng trừ khi cả toàn bộ mảng đó đã hoàn toàn được sắp xếp theo thứ tự tăng dần.
+Điều này có thể làm tăng độ phức tạp, tức là tăng các thao tác so sánh và tráo đổi không cần thiết nếu như mảng này không cần sự tráo đổi nào nữa khi tất cả các phần tử đã được sắp xếp theo thứ tự tăng dần rồi.
+Để tránh việc này xảy ra, chúng ta có thể sử dụng một biến swapped chẳng hạn để giúp chúng ta biết có cần thực hiện thao tác tráo đổi thứ tự hay không.
+Nếu không cần thiết thì thoát khỏi vòng lặp.
+Bắt đầu hàm bubbleSort( list : mảng các phần tử )
+   loop = list.count;
+   for i = 0 tới loop-1 thực hiện:
+      swapped = false
+      for j = 0 tới loop-1 thực hiện:
+         /* so sánh các phần tử cạnh nhau */   
+         if list[j] > list[j+1] then
+            /* tráo đổi chúng */
+            swap( list[j], list[j+1] )		 
+            swapped = true
+         kết thúc if
+         
+      kết thúc for
+      /*Nếu không cần tráo đổi phần tử nào nữa thì 
+      tức là mảng đã được sắp xếp. Thoát khỏi vòng lặp.*/
+      if(not swapped) then
+         break
+      kết thúc if
+   kết thúc for
+Kết thúc hàm return list

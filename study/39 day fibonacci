@@ -1,0 +1,11 @@
+- Dãy Fibonacci
+
+- Dãy Fibonacci là gì ?
+Dãy Fibonacci tạo dãy các số bằng cách cộng hai số đằng trước. Dãy Fibonacci bắt đầu từ hai số: F0 & F1.
+Giá trị ban đầu của F0 & F1 có thể tương ứng là 0, 1 hoặc 1, 1.
+Điều kiện của dãy Fibonacci là:
+Fn = Fn-1 + Fn-2
+Ví dụ một dãy Fibonacci:
+F8 = 0 1 1 2 3 5 8 13
+Ví dụ một dãy Fibonacci khác:
+F8 = 1 1 2 3 5 8 13 21

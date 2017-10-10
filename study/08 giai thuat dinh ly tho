@@ -1,0 +1,13 @@
+- Giải thuật định lý thợ (Master Theorem)
+
+- Giải thuật định lý thợ (Master Theorem) là gì?
+Chúng ta sử dụng Định lý thợ (Master Theorem) để giải các công thức đệ quy dạng sau một cách hiệu quả :
+T(n) =aT(n/b) + c.n^k trong đó a>=1 , b>1
+Bài toán ban đầu được chia thành a bài toán con có kích thước mỗi bài là n/b, chi phí để tổng hợp các bài toán con là f(n).
+Ví dụ : Thuật toán sắp xếp trộn chia thành 2 bài toán con , kích thước n/2. Chi phí tổng hợp 2 bài toán con là O(n).
+
+- Định lý thợ
+a>=1, b>1, c, k là các hằng số. T(n) định nghĩa đệ quy trên các tham số không âm
+T(n) = aT(n/b) + c.n^k + Nếu a> b^k thì T(n) =O(n^ (logab)) + Nếu a= b^k thì T(n)=O(n^k.lgn) + Nếu a< b^k thì T(n) = O(n^k)
+Chú ý: Không phải trường hợp nào cũng áp dụng được định lý thợ
+VD : T(n) = 2T(n/2) +nlogn a =2, b =2, nhưng không xác định được số nguyên k

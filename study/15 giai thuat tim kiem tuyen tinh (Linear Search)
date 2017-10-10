@@ -1,0 +1,26 @@
+- Giải thuật tìm kiếm tuyến tính (Linear Search)
+
+- Giải thuật tìm kiếm tuyến tính (Linear Search) là gì?
++ Linear Search là một giải thuật tìm kiếm rất cơ bản. Trong kiểu tìm kiếm này, một hoạt động tìm kiếm liên tiếp được diễn ra qua tất cả từng phần tử.
+Mỗi phần tử đều được kiểm tra và nếu tìm thấy bất kỳ kết nối nào thì phần tử cụ thể đó được trả về; nếu không tìm thấy thì quá trình tìm kiếm tiếp tục diễn ra cho tới khi tìm kiếm hết dữ liệu.
+
+- Giải thuật tìm kiếm tuyến tính
+Giải thuật tìm kiếm tuyến tính ( Mảng A, Giá trị x)
+Bước 1: Thiết lập i thành 1
+Bước 2: Nếu i > n thì chuyển tới bước 7
+Bước 3: Nếu A[i] = x thì chuyển tới bước 6
+Bước 4: Thiết lập i thành i + 1
+Bước 5: Tới bước 2
+Bước 6: In phần tử x được tìm thấy tại chỉ mục i và tới bước 8
+Bước 7: In phần tử không được tìm thấy
+Bước 8: Thoát
+
+- Giải thuật mẫu cho tìm kiếm tuyến tính
+Bắt đầu hàm linear_search (list, value)
+   for mỗi phần tử trong danh sách
+      if match item == value
+         return vị trí của phần tử
+      kết thúc if
+   kết thúc for
+kết thúc hàm
+
